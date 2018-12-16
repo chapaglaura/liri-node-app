@@ -29,6 +29,9 @@ function choice() {
         case 'do-what-it-says':
             doWhatever();
             break;
+
+            default:
+            console.log('Command does not exist.');
     }
 }
 
@@ -104,7 +107,7 @@ function omdbMovie() {
             var title = response.data.Title;
             var year = response.data.Year;
             var imdbRating = response.data.imdbRating;
-            var rtRating = response.data.Ratings[0];
+            var rtRating = response.data.Ratings[1].Value;
             var country = response.data.Country;
             var language = response.data.Language;
             var plot = response.data.Plot;
